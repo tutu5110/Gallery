@@ -1,0 +1,22 @@
+.jimgThumbnails{
+	display: inline-block;
+	padding: 15px;
+}
+#jgallery_master{
+	/*		background-color:#ff8800;*/
+	width:100%;
+	text-align: center;
+	margin:  0 auto 0 auto;
+}
+
+#jgallery_content{
+	/*background-color: #aa8800;*/
+	text-align: center;
+	margin:  0 auto 0 auto;
+}
+#jgallery_realcontent{
+	/*background-color: #bb1280;*/
+	text-align: left;
+	margin: 0 auto 0 auto;
+	width: 80%;
+}

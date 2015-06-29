@@ -1,0 +1,34 @@
+<html>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+	const thumb_width = 300;
+	const thumb_padding = 10;
+	var num_of_images = 10;
+	var images = String[num_of_images];
+	var w = $(window).width();
+	var num_per_row = Math.floor(w / (thumb_width + thumb_padding)) -1;
+
+	$(document).ready(function(){
+		console.log(num_per_row );
+		$('#jgallery_content').width((thumb_width+thumb_padding) * num_per_row);
+		var g = $('#jgallery_realcontent');
+		for(var i = 0 ; i < num_per_row; i ++){
+			g.append("<div id='img_"+i+"' class='jimgThumbnails'><img src='images/p"+i+".jpg' width = '"+thumb_width+"' /></div>");
+
+		}
+	});
+
+</script>
+<head>
+</head>
+<body>
+		<div id="jgallery_master">
+			<div id="jgallery_content">
+				<div id="jgallery_realcontent">
+				</div>
+			</div>
+ 		</div>
+</body>
+
+</html>
