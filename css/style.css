@@ -1,6 +1,13 @@
 .jimgThumbnails{
 	display: inline-block;
-	padding: 15px;
+	padding: 40px 20px 0 20px;
+}
+.imgcover{
+	width: 100px;
+	height: 100px;
+	background-color: rgba(123,213,250,0.5);
+	position: absolute;
+	display: inline-block;
 }
 #jgallery_master{
 	/*		background-color:#ff8800;*/
@@ -11,6 +18,7 @@
 
 #jgallery_content{
 	/*background-color: #aa8800;*/
+	width: 80%;
 	text-align: center;
 	margin:  0 auto 0 auto;
 }
@@ -18,5 +26,39 @@
 	/*background-color: #bb1280;*/
 	text-align: left;
 	margin: 0 auto 0 auto;
-	width: 80%;
+	width: 90%;
+}
+
+
+#title{
+	word-spacing: 20px;
+	margin: 30px 0 20px 20px;
+	
+}
+
+#title a:link{
+	text-decoration: none;
+	color:#424242;
+}
+
+#title a:visited{
+	text-decoration: none;
+	color:#424242;
+}
+
+#title a:hover{
+	text-decoration: none;
+	color:#3ac5ff;
+}
+
+#title a:active{
+
+	text-decoration: none;
+	color:#424242;
+	
+}
+
+#title_back{
+	float: right;
+	margin: 0 8% 0 0 ;
 }

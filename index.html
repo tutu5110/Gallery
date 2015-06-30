@@ -2,30 +2,36 @@
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <link href="css/style.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript">
-	const thumb_width = 300;
-	const thumb_padding = 10;
+	var thumb_width = 250;
+	var thumb_padding = 10;
 	var num_of_images = 10;
 	var images = String[num_of_images];
 	var w = $(window).width();
 	var num_per_row = Math.floor(w / (thumb_width + thumb_padding)) -1;
 
 	$(document).ready(function(){
-		console.log(num_per_row );
-		$('#jgallery_content').width((thumb_width+thumb_padding) * num_per_row);
 		var g = $('#jgallery_realcontent');
-		for(var i = 0 ; i < num_per_row; i ++){
-			g.append("<div id='img_"+i+"' class='jimgThumbnails'><img src='images/p"+i+".jpg' width = '"+thumb_width+"' /></div>");
-
+		console.log("total width " + g.width());
+		thumb_width = parseInt((g.width() / 3.5) - thumb_padding);
+	
+		for(var i = 0 ; i < num_of_images; i ++){
+			g.append("<div id='img_"+i+"' class='jimgThumbnails'><div id='img_cover_"+i+"' class='imgcover'>Info</div><img id='innerimg_"+i+"' src='images/p"+i+".jpg' width = '"+thumb_width+"' height='auto' /></div>");
+			
+			$('#img_cover_'+i).height(thumb_width *0.5);
 		}
+		$('.imgcover').css("width",thumb_width);
+	
 	});
 
 </script>
 <head>
 </head>
 <body>
+
 		<div id="jgallery_master">
 			<div id="jgallery_content">
 				<div id="jgallery_realcontent">
+				<div id="title"><a href="javascript:void(0);">Graphics</a> &middot; <a href="javascript:void(0);">Exhibitions</a> &middot; <span style=" word-spacing: 5px;"><a href="javascript:void(0);">Experience Design</a></span> &middot; Photography <div id="title_back">Jing's</div></div>
 				</div>
 			</div>
  		</div>
